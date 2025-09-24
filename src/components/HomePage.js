@@ -12,12 +12,12 @@ const Home = () => {
             <hr />
             <div className="mb-5 text-center">
                 <p>Click Here to have a look at our Users</p>
-                <button type="button" onClick={()=>navigate("/users")}>View Users</button>
+                <button type="button" onClick={()=>navigate("/client/users")}>View Users</button>
             </div>
             <hr />
             <div className="mt-5 text-center">
                 <p>Click Here to add a new user</p>
-                <button type="button"  onClick={()=>navigate("/add")}>Add User</button>
+                <button type="button"  onClick={()=>navigate("/client/add")}>Add User</button>
             </div>
             </div>
         </div>
