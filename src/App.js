@@ -18,11 +18,11 @@ const App = ()=> {
     <BrowserRouter>
     <ToastContainer />
       <Routes>
-        <Route path="/" Component={Home}/>
-        <Route path="/users" Component={ReadUsers} />
-        <Route path="/add" Component={CreateUser} />
-        <Route path="/users/:userId" Component={RetrieveUser} />
-        <Route path='/update/:userId' Component={UpdateUser} />
+        <Route path="/client/" Component={Home}/>
+        <Route path="/client/users" Component={ReadUsers} />
+        <Route path="/client/add" Component={CreateUser} />
+        <Route path="/client/users/:userId" Component={RetrieveUser} />
+        <Route path='/client/update/:userId' Component={UpdateUser} />
       </Routes>
     </BrowserRouter>
     </Container>
