@@ -43,9 +43,9 @@ const RetrieveUser = () => {
             <Col lg={4}>
                 <Card className='mb-5'>
                     <Card.Body>
-                        <h4 className='text-center'>{user.name}</h4>
-                        <p className='text-center'>{user.email}</p>
-                        <p className='text-center'>{user.phone}</p>
+                        <h4 className='text-center'>{name}</h4>
+                        <p className='text-center'>{email}</p>
+                        <p className='text-center'>{phone}</p>
                         
                     </Card.Body>
                 </Card>
