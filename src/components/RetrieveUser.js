@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import {Col, Row, Card, Container} from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 
@@ -13,26 +13,22 @@ const RetrieveUser = () => {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     
-    const fetchUser = async () => {
-        try{
-        const response = await axios.get(`${apiUrl}`)
-        console.log(response)
-        setUser(response.data)
-        setName(user.name)
-        setEmail(user.email)
-        setPhone(user.phone)
-       
-        } 
-        catch(err){
-            console.log(err);
-            
-        }
+    const fetchUser = useCallback(async () => {
+    try {
+        const response = await axios.get(apiUrl);
+        setUser(response.data);
+        setName(response.data.name);
+        setEmail(response.data.email);
+        setPhone(response.data.phone);
+    } catch (err) {
+        console.log(err);
     }
+}, [apiUrl]);
 
     useEffect(() => {
-        fetchUser()
-        
-    }, [userId])
+        fetchUser();
+    }, [fetchUser]);
+
 
     return (
         <Container>
