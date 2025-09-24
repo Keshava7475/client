@@ -41,7 +41,7 @@ const ReadUsers = () => {
                                 <p className='text-center'>{user.email}</p>
                                 <p className='text-center'>{user.company.bs}</p>
                                 <button type="button" className='m-3' onClick={()=>onClickDelete(user.id)} >Delete</button>
-                                <button type="button" className='ml-3'onClick={()=>navigate(`/update/${user.id}`)} >Edit</button>
+                                <button type="button" className='ml-3'onClick={()=>navigate(`/client/update/${user.id}`)} >Edit</button>
                             </Card.Body>
                             
                         </Card>
